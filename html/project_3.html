@@ -100,7 +100,8 @@
             }
 
             ul li a:hover,
-            #active-option {
+            #active-option,
+            .data-info .box:hover {
                 background-color: rgb(255, 255, 255, 0.8)
             }
 
@@ -140,6 +141,47 @@
 
             .title-info i {
                 font-size: 20px 0;
+            }
+
+            .data-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                /* بدنا نعملها wrap عشان تصير responsive */
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 10px;
+
+
+            }
+
+            .data-info .box {
+                height: 150px;
+                background-color: var(--menu_bac);
+                flex-basis: 150px;
+                /* في مساحة فاضية ولازم البوكسز تعملاها */
+                flex-grow: 1;
+                border-radius: 8px;
+                /* margin: 0 10px; */
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+            }
+
+            .data-info .box i {
+                font-size: 40px;
+
+            }
+
+            .data-info .box .data {
+                text-align: center;
+
+            }
+
+            .data-info .box span {
+                font-size: 30px;
+
             }
         </style>
     </head>
