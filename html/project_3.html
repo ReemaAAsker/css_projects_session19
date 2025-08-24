@@ -21,11 +21,14 @@
             :root {
                 --background: #001;
                 --menu_bac: #123;
+                --secoundary: #0481ff;
+
 
             }
 
             body {
                 background-color: var(--background);
+                display: flex;
             }
 
             .profile {
@@ -118,6 +121,26 @@
                 font-size: 30px;
 
             }
+
+            .content {
+                /* خلفية عشان نشوفها ونعرف شو هنعمل */
+                /* background-color: red; */
+                /* لقيت انه العرض تبعها عقد المحتوى فنخليه مية فالمية */
+                width: 100%;
+            }
+
+            .title-info {
+                background-color: var(--secoundary);
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 8px;
+                margin: 10px;
+            }
+
+            .title-info i {
+                font-size: 20px 0;
+            }
         </style>
     </head>
 
@@ -192,7 +215,15 @@
             </ul>
 
         </div>
-
+        <div class="content">
+            <div class="title-info">
+                <p>Dashboard</p>
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <!-- بنلاقي انه محتوى هذا الديف نزل لتحت واحنا محتاحينو فوق جنب المينو -->
+            <!-- الحل احنا بدنا انه يكونوا المينو والمحتوى جنب بعض فبنروح لابوهم وهو ال body
+ وبنخلي flex -->
+        </div>
 
 
 
