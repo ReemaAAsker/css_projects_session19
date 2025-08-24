@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Form</title>
+        <style>
+            :root {
+                --primary-color: #1e90ff;
+                --secondary-color: #4682b4;
+                --background-color: #f4f6f9;
+                --text-color: #333;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background-color: var(--background-color);
+                padding: 10px;
+            }
+
+            form {
+
+                width: 80%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                background-color: #a1cbf562;
+                padding: 20px;
+                border-radius: 8px;
+                animation: fadeInScale 0.8s ease-in-out;
+
+            }
+
+            span {
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 12px;
+                font-family: monospace;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            form>div {
+                width: 200px;
+
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+
+            }
+
+            label {
+                margin-bottom: 5px;
+                font-family: monospace;
+                font-size: 14px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            input {
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                color: var(--primary-color);
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            input:focus {
+                border-color: var(--primary-color);
+                outline: none;
+                box-shadow: 0 0 6px #1e90ff66;
+            }
+
+            button {
+                flex-grow: 1;
+                margin-top: 20px;
+                width: 30;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                padding: 12px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                background-color: #1e90ff;
+                color: #fff;
+                transition: background 0.3s;
+            }
+
+            button:hover {
+                background-color: var(--secondary-color)
+            }
+
+            select {
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                color: var(--primary-color);
+                padding: 10px;
+                font-size: 12px;
+                color: var(--primary-color);
+                font-weight: bold;
+            }
+
+            @keyframes fadeInScale {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.9);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <span>Contact Us</span>
+
+            <div>
+                <label for="firstname">First Name</label>
+                <input id="firstname" type="text" name="f_name" placeholder="Enter first name" required>
+            </div>
+
+            <div>
+                <label for="lastname">Last Name</label>
+                <input id="lastname" type="text" name="s_name" placeholder="Enter last name" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Enter email" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" name="phone" placeholder="Enter phone" required>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input id="pass" type="password" name="password" placeholder="Enter password" required>
+            </div>
+            <div>
+                <label for="pass">Options</label>
+
+                <select>
+                    <option value="" selected>Aid Types</option>
+                    <option value="cash">Cash aid </option>
+                    <option value="health">Health aid</option>
+                    <option value="edu">Education aid</option>
+                </select>
+            </div>
+
+            <button type="submit">Send</button>
+        </form>
+    </body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                color: white;
+                /* the background is dart so i want all text color be white */
+            }
+
+            :root {
+                --background: #001;
+                --menu_bac: #123;
+
+            }
+
+            body {
+                background-color: var(--background);
+            }
+
+            .profile {
+                display: none;
+            }
+
+            .menu {
+                background-color: var(--menu_bac);
+                width: 260px;
+                height: 100vh;
+                padding: 20px;
+
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            ul li a {
+                /* هنواجه مشكلة فال margin and padding لانه ال a عنصر inline*/
+                display: block;
+                text-decoration: none;
+                /* 
+                background مؤقت */
+                /* background-color: tomato; */
+                padding: 10px;
+                margin: 6px 0;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                /* بعد ال hover */
+                transition: 0.5;
+
+            }
+
+            ul li a:hover,
+            #active-option {
+                background-color: rgb(255, 255, 255, 0.8)
+            }
+
+            #logout {}
+        </style>
+    </head>
+
+    <body>
+
+
+        <div class="menu">
+            <ul>
+                <li class="profile">
+                    <div class="img-box">
+                        <img src="/images/logo.png" alt="logo">
+                    </div>
+                    <h2>John Doe</h2>
+                </li>
+                <li>
+                    <a href="" id="active-option">
+
+                        <i class="fas fa-home"> </i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <i class="fas fa-user-group"> </i>
+                        <p>clients</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <i class="fas fa-table"> </i>
+                        <p>products</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <i class="fas fa-chart-pie"> </i>
+                        <p>charts</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <i class="fas fa-pen"> </i>
+                        <p>posts</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <i class="fas fa-star"> </i>
+                        <p>favorite</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <i class="fas fa-cog"> </i>
+                        <p>settings</p>
+                    </a>
+                </li>
+                <li id="logout">
+                    <a href="">
+
+                        <i class="fas fa-sign-out"> </i>
+                        <p>log Out</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+
+
+
+    </body>
+
+</html>
